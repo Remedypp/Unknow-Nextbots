@@ -1,0 +1,11 @@
+ENT.Type = "anim"
+ENT.Base = "base_gmodentity"
+ENT.PrintName = "UNKNOW Digital Prision"
+ENT.Author = "UNKNOW_CLASS"
+ENT.Contact = ""
+ENT.Purpose = "Digital World Access Terminal"
+ENT.Instructions = "Use with UNKNOW_CLASS to access Digital World"
+ENT.Spawnable = false
+ENT.AdminSpawnable = false
+ENT.Category = "UNKNOW Entities"
+ENT.RenderGroup = RENDERGROUP_TRANSLUCENT

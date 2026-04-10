@@ -1,0 +1,10 @@
+ENT.Base            = "base_nextbot"
+ENT.Name            = "FAKE"
+ENT.Author          = "Remedy"
+ENT.Class           = "UNKNOW"
+ENT.Category        = "Unknown Nextbot's"
+ENT.Spawnable       = false
+ENT.AdminSpawnable  = false
+ENT.Solid           = SOLID_NONE
+ENT.CollisionGroup  = COLLISION_GROUP_NONE
+ENT.RenderGroup     = RENDERGROUP_TRANSLUCENT

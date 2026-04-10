@@ -1,0 +1,17 @@
+"Modulate"
+{
+	"$znearer" 1
+	"$basetexture" "hide/ICONS/hide_icon"
+	"$additive" 1
+	"$translucent" 1
+	"$mod2x" "1"
+"Proxies"
+{
+"AnimatedTexture"
+{
+"animatedTextureVar" "$basetexture"
+"animatedTextureFrameNumVar" "$frame"
+"animatedTextureFrameRate" "6"
+}
+}
+}
