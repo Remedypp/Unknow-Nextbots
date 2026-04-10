@@ -138,15 +138,3 @@ hook.Add("Think", "UNKNOW_MenuScareThink", function()
     end
     wasMenuOpen = isMenuOpen
 end)
-concommand.Add("unknow_scare_test", function()
-    menuScareActive = true
-    menuScareStartTime = RealTime()
-    menuScareY = ScrH() + EYE_SIZE
-    targetY = ScrH() * 0.5
-    currentPupilX = 0
-    currentPupilY = 0
-    surface.PlaySound("ambient/levels/citadel/strange_talk" .. math.random(1, 11) .. ".wav")
-    timer.Simple(5, function()
-        menuScareActive = false
-    end)
-end)
