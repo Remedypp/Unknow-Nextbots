@@ -45,6 +45,7 @@ local function AnimateIcons()
 end
 hook.Add("PopulateEntities", "REWORK_SpawnMenuIcon", function(_, tree)
     timer.Simple(0.1, function()
+        if not IsValid(tree) or type(tree.Root) ~= "function" then return end
         local root = tree:Root()
         if not root then return end
         for _, node in pairs(root:GetChildNodes()) do
@@ -53,8 +54,13 @@ hook.Add("PopulateEntities", "REWORK_SpawnMenuIcon", function(_, tree)
     end)
 end)
 hook.Add("PopulateNPCs", "REWORK_SpawnMenuIcon", function(_, tree)
-    for _, node in pairs(tree:Root():GetChildNodes()) do
-        SetNodeIcon(node)
-    end
+    timer.Simple(0.1, function()
+        if not IsValid(tree) or type(tree.Root) ~= "function" then return end
+        local root = tree:Root()
+        if not root then return end
+        for _, node in pairs(root:GetChildNodes()) do
+            SetNodeIcon(node)
+        end
+    end)
 end)
 hook.Add("Think", "REWORK_IconAnimation", AnimateIcons)

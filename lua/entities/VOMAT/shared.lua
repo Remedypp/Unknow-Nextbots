@@ -1,7 +1,7 @@
 ENT.Base = "base_nextbot"
 ENT.PrintName = "Vomat"
 ENT.Name = "Vomat"
-ENT.Author = "Remedy"
+ENT.Author = "Remedy / HIDE_REWORK"
 ENT.Class = "VOMAT"
 ENT.Category = "Unknown Nextbot's"
 ENT.RenderGroup = RENDERGROUP_TRANSLUCENT

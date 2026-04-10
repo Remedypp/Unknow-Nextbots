@@ -152,7 +152,6 @@ function ENT:IncrementCatchCount(player)
     self.boneDistortionData.catchCount[steamID] = (self.boneDistortionData.catchCount[steamID] or 0) + 1
     local catchCount = self.boneDistortionData.catchCount[steamID]
     self.boneDistortionData.distortionChance = 0.008 + (catchCount * 0.002)
-          string.format("%.1f%%", self.boneDistortionData.distortionChance * 100))
     if catchCount >= 3 and not self.boneDistortionData.systemActivated then
         self.boneDistortionData.systemActivated = true
     end
