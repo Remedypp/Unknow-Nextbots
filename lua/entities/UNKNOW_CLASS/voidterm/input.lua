@@ -68,6 +68,15 @@ function VOIDTERM.Input.Init(mainFrame, menuState, playSoundFunc)
             action = function(s) s.logsUnlocked = true end,
             msg = "ACCESS GRANTED: CLASSIFIED ARCHIVE UNLOCKED"
         },
+        ["REDACTED_CODE"] = {
+            action = function(s)
+                net.Start("UNKNOW_ComputerAction")
+                net.WriteString("SPAWN_UNKNOW")
+                net.WriteString("")
+                net.SendToServer()
+            end,
+            msg = "WARNING: DEPLOYING SUBJECT 901..."
+        }
     }
     inputs.code.OnEnter = function(self)
         local entered = string.upper(string.Trim(self:GetValue()))

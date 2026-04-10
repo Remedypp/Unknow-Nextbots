@@ -78,7 +78,12 @@ net.Receive("UNKNOW_ComputerAction", function(len, ply)
                 unknowEnt:SetSpawnedByUnknowClass(true)
                 unknowEnt:SetPos(spawn:GetPos() + Vector(0, 0, 5))
                 unknowEnt:Spawn()
-                ply:ChatPrint("[PETROV-OS] Entity spawned successfully")
+                ply:ChatPrint("[PETROV-OS] WARNING: CONTAINMENT BREACH DETECTED.")
+                for _, p in ipairs(player.GetAll()) do
+                    if IsValid(p) then
+                        p:SendLua('surface.PlaySound("Unknow_Computer/Alert.wav")')
+                    end
+                end
             end
         end
         for _, ent in ipairs(ents.FindByClass("UNKNOW_CLASS")) do

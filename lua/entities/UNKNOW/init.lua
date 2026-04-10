@@ -9,6 +9,12 @@ include("modules/combat.lua")
 include("modules/sounds.lua")
 include("modules/stalking.lua")
 include("modules/illusions.lua")
+hook.Add("PlayerSpawnSENT", "RestrictUnknowSpawn", function(ply, class)
+    if class == "unknow" then
+        ply:ChatPrint("[ARES SYSTEM] ERROR: SUBJECT 901 IS DIGITALLY IMPRISONED. VIRTUAL OVERRIDE REQUIRED.")
+        return false
+    end
+end)
 local DETECTION_RANGE = 2000
 local CAMERA_RANGE = 1500
 local CAMERA_FOV = 60
